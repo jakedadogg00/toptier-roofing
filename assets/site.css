@@ -1,0 +1,29 @@
+/* The original site's stylesheet supplies the design; these rules support native controls. */
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid #1768de; outline-offset: 5px; }
+.skip-link { position: fixed; top: -80px; left: 16px; z-index: 100; padding: 12px 18px; background: white; color: #1c1c1c; }
+.skip-link:focus { top: 12px; }
+#mobile-menu { padding: 0 24px 20px; border-top: 1px solid #ffffff20; }
+#mobile-menu a { display: block; padding: 12px 0; color: white; }
+.gallery-card { display: block; }
+.gallery-card > img { position: absolute; inset: 0; }
+[data-filter][aria-pressed="true"] { background: #D97706; color: white; }
+[data-filter][aria-pressed="false"] { background: white; color: #6B5B3E; }
+.form-note { font-size: 13px; line-height: 1.5; color: #6B5B3E; }
+#inquiry-status:empty { display: none; }
+#image-viewer { padding: 46px 16px 14px; background: #1c1c1c; color: white; border: 1px solid #ffffff30; border-radius: 12px; width: min(1100px, 94vw); max-height: 94dvh; }
+#image-viewer::backdrop { background: #000d; }
+#viewer-image { width: 100%; height: min(72dvh, 820px); object-fit: contain; }
+#image-caption { padding: 12px 0 0; text-align: center; }
+.viewer-close { position: absolute; top: 0; right: 8px; width: 44px; height: 44px; font: 32px/1 sans-serif; }
+.contact-widget { position: fixed; bottom: 24px; right: 24px; z-index: 60; }
+#contact-toggle { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: #D97706; color: white; box-shadow: 0 3px 12px #0003; margin-left: auto; }
+#quick-contact { width: min(320px, calc(100vw - 32px)); margin-bottom: 12px; padding: 24px; border-radius: 12px; background: #f5f0e8; border: 1px solid #d4c9b0; box-shadow: 0 8px 32px #0003; }
+#quick-contact h2 { font: 28px/1.1 'Bebas Neue', sans-serif; color: #1c1c1c; }
+#quick-contact p { font-size: 14px; color: #6b5b3e; margin: 10px 0; }
+#quick-contact a { display: block; padding: 10px 0; color: #8d4a02; font-weight: 600; text-decoration: underline; }
+@media (min-width: 768px) { #mobile-menu { display: none !important; } }
+@media (max-width: 767px) { .contact-widget { bottom: 76px; right: 16px; } html { scroll-padding-top: 85px; } }
+@media (max-width: 359px) { [data-filter] { padding-left: 12px; padding-right: 12px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
